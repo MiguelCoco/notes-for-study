@@ -1,0 +1,150 @@
+Python编程从入门到实践
+关键的字
+函数、方法、语句
+重要概念、难点、易忘
+Chapter 1
+计算机程序（computer program）/软件（software）：
+一组指示计算机或其他具有信息处理能力装置执行动作或做出判断的指令。
+文本编辑器：
+	计算机软件的一种，编写和查看文本文件，常用来编写程序的源代码。
+源代码：
+	指未编译的按照一定的程序设计语言规范书写的文本文件，是一系列人类可读的计算机语言指令
+操作系统（operating system）：
+	是管理和控制计算机硬件与软件资源的计算机程序
+	操作系统是硬件与软件的接口，用户和计算机的接口
+解释器（英语：interpreter）：
+	又译为直译器，是一种电脑程序，能够把高级编程语言一行一行直接转译运行
+配置环境变量（Add to PATH）：
+1、控制面板>系统>高级系统设置>环境变量>系统变量>Path>编辑>单击变量值>向右箭头到最右添加英文输入下的分号（;）>添加Python.exe路径>一路确定
+2、右击我的电脑图标>属性>高级系统设置>环境变量~~~~
+Python文件和文件夹命名约定，采用小写字母，使用下划线表示空格，类命名采用驼峰命名法（PythonWork）
+提问智慧：
+	1、what do you want to do ?
+	2、What methods have you tried ?
+	3、what is the result ?
+Chapter 2
+Python解释器运行.py文件，读取文件所有内容，确定含义，编辑器突出显示程序的不同部分的功能成	为语法突出
+函数 Print（），打印（）中的内容到屏幕上，返回（）内容
+变量：存储一个与变量相关联的值，值可以有很多类型（数值、文本、列表、字典等）
+	变量规则：
+		变量名只能包含字母、数字和下划线且不能以数字开头
+		变量名不能包含空格
+		变量名不能使用Python关键字和函数名
+		变量名应简短、具有描述性
+		慎用字母l和o
+		变量名尽量不用大写字母，因为类名必须大写，易混淆
+程序出错，traceback回溯错误，指出文件中第X行出现错误，指出错误类型
+名称错误（NameError）：
+ 使用变量前忘记赋值（定义变量）
+		变量名拼写错误
+	语法错误（SyntaxError）：
+		代码不符合语法规范
+	类型错误（TypeError）:
+		数值和文本类型混用
+		参数传递错误
+	缩进错误（IndentationEor）:
+		需缩进没缩进，不需缩进却缩进
+		Tab和 Space混用
+	属性错误：（AttributeError）
+		函数或方法不属于某模块
+字符串：一系列字符
+拼接字符串：使用 + 号连接多个字符串
+空白：指任何非打印字符，如空格、制表符、换行符
+空格：” “
+制表符：”\t”
+换行符：”\n”
+多余空白令人疑惑（删除空白）：
+函数 rstrip() 删除末尾空白，函数 lstrip（） 删除开头空白，函数 strip（） 删除字符串两端空白
+数字
+	整数：四则运算，（）改变运算次序
+浮点数：带小数点的数字，小数点可以出现在数字的任何位置，结果中的小数位数有时不确定 0.2 + 0.1 = 0.30000000000000001
+	函数 str（）将数值转换为字符串
+注释：注释是在自然语言程序中添加的说明
+	Python中用 # 标识注释，”””   “””注释多行代码
+	注释阐述代码做什么、如何做、简洁且概括
+Python之禅：编写代码的指导原则（import  this）	
+	Beautiful is better than ugly
+	Simple is better than complex
+	Readability counts
+	Now is better than never
+Chapter 3
+列表	
+	由一系列按特定顺序排列的元素组成，可以加入任何元素，列表名指定为复数较好
+	方括号 [ ] 表示列表，逗号 ， 分隔其中的元素
+	访问列表
+指出列表名称，然后指出元素在列表中的位置，将表示位置的数字放在[ ]内 cars[5]，位置从0开始而不是1，列表最后一个元素位置可以将索引指定为-1
+	修改列表
+		指定列表名，要修改的元素的索引，指定该元素的新值
+	添加元素
+		指定列表名，使用方法append（）将元素添加到指定的列表末尾
+		指定列表名，使用方法insert（）指定新元素的索引及值如：cars.insert[5, ’audi’]
+	删除元素
+		指定列表名，使用语句del 指定要删除的元素的索引如：del cars[5]
+		指定列表名，使用方法pop（）弹出列表元素（可以使用其值），默认弹出末尾元素，指定索		引弹出指定元素 如：cars.pop（2）弹出cars列表中第3个元素
+		指定列表名，使用方法remove（）移除列表元素（可以使用其值） 如：cars.remove			（’audi’）
+	组织列表
+		指定列表名，使用方法sort（）按字母顺序永久排序 如：cars.sort（）
+		指定列表名，使用方法sorted（）按字母顺序临时排序 如：cars.sorted（）
+	确定列表长度
+		指定列表名称，使用函数len（） 如：len（cars）
+Chapter4
+for循环遍历整个列表（自动完成重复工作）
+	magicians = [‘alice’, ’davis’, ‘carolina’]
+	for magician in magicians:   #冒号容易遗漏，冒号告诉Python下一行是循环的第一行
+		print(magician)
+缩进
+	Python根据缩进判断相连的两行代码之间的关系，Tab和空格不混合使用
+数值列表
+	函数range（）生成一系列数字，Python从你指定的第一个值开始数，并在指定的第二个值后停	止，输出不包含第二个值
+	函数list（）返回列表
+	函数min（）返回列表中的最小值
+	函数max（）返回列表中的最大值
+	函数sum（）返回列表所有元素相加的值
+	列表解析
+		指定一个列表名，左方括号，定义表达式，使用for循环给表达式提供值，加上右方括号
+		Squares = [ value**2 for value in rang(1,11)] 这里for循环没有冒号
+切片（列表的部分）
+	创建切片，指定列表名，指定开始元素和结束元素的索引 如cars[0:3]将输出前三个元素，cars[1:3]	将输出第一第二个元素
+	复制列表，使用切片可以实现
+		my_foods = [ ‘a’, ‘b’, ‘c’]
+		friend_foods = my_food[ : ]
+元组（不可变的列表）
+	Python将不能修改的值成为不可变的，不可变的列表称为元组，元组看起来和列表一样但使用圆括	号标识（）
+	修改元组变量
+		元组中的元素不能被改变，修改元组中的元素需重新定义新的元组
+代码格式
+	Python改进提案（Python Enhancement Proposal, PEP）
+	PEP8建议每级缩进使用4个空格
+	每行不超过80字符，多数计算机终端每行只能容纳79字符，注释长度不超过72字符
+	合理使用空行组织代码，Python只关心水平缩进而不关心垂直距离
+Chapter 5
+If语句
+	条件测试：每条if语句的核心都是一个值为True和False的表达式，这种表达式成为条件测试，	True则执行if语句后的代码，False则忽略if语句后的代码
+	=  赋值运算符   == 相等运算符 == 相等 ！=不等  比较>  <  <=  >= 
+	检查多个条件
+		and	   or  
+	检查在不在
+		in    not in
+	简单的if语句
+		if condition_test:
+			do something
+	if—else语句
+		if condition_test:
+			do something
+		else:
+			do something
+	检查多个情况（if--elif—else语句）
+		if condition_test_1:
+			do something_1
+		elif condition_test2:
+			do something_2
+		else:
+			do something_3
+	测试多个条件（满足1，执行1，满足2，也执行1，满足3，执行1）
+		if condition_test1:
+			do something_1
+		if condition_test_2:
+			do something_1
+		if condition_3:
+			do something_1
+
