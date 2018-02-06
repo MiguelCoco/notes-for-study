@@ -1,0 +1,9 @@
+windows环境下使用ANACONDA:
+Anaconda
+strengths:
+  1.创建不同python版本的独立虚拟环境
+  conda create -n  名字  python=3.5/3.6/2.7 
+  2.可以直接利用conda安装及更新工具包
+  conda install numpy
+  conda update numpy
+  
