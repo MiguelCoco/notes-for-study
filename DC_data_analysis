@@ -1,14 +1,52 @@
 windows环境下使用ANACONDA:
-Anaconda
-strengths:
-  1.创建不同python版本的独立虚拟环境
-  conda create -n  名字  python=3.5/3.6/2.7 
-  2.进入/退出虚拟环境
-  activate/deactivate 名字
-  3.可以直接利用conda安装及更新工具包
-  conda install numpy
-  conda update numpy
-添加清华大学的conda镜像服务器，提升下载速度
-  conda config --add channels https://mirror.tuna.tsinghua.edu.cn/anaconda/pkgs/free
-  conda config --set show_channel_urls yes
+    Anaconda
+        strengths:
+            1.创建不同python版本的独立虚拟环境
+                conda create -n  名字  python=3.5/3.6/2.7 
+            2.进入/退出虚拟环境
+                activate/deactivate 名字
+            3.可以直接利用conda安装及更新工具包
+                conda install numpy（包名）
+                conda update numpy
+        添加清华大学的conda镜像服务器，提升下载速度
+            conda config --add channels https://mirror.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+            conda config --set show_channel_urls yes
+        查看conda命令的帮助
+            conda -h/--help
+        pip安装工具包
+            pip install scikit-learn(包名)
 
+
+数据获取方式
+    开放数据集：
+        科研数据共享
+            UCI CRAWDAD SNAP
+        数据算法竞赛
+            Kaggle Tianchi kddcup
+        政府公司分享
+            上海市政府 数据服务网  lendingclub  citybike
+        个人分享
+            微软yuzheng
+        优势：
+            数据质量高
+            描述性强
+            案列
+        劣势：
+            属性项少
+            时效性一般
+            隐私保护的数据混淆
+    网站爬虫：
+        建立网站链接
+        爬取网页/API
+        分析返回结果
+        抽取所需信息
+    
+API网站爬虫：
+    1.在想爬取的网站注册开发者账户，获取开发者秘钥
+    2.网站API帮助文档找到自己需要的API
+        确定API请求的限制次数
+        确认调用API的参数
+    3.联网编写代码正确使用API
+    
+    
+    
