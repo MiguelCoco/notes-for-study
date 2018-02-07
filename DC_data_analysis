@@ -47,6 +47,37 @@ API网站爬虫：
         确定API请求的限制次数
         确认调用API的参数
     3.联网编写代码正确使用API
+    4.API返回结果（csv，json格式居多）,抽取需要的属性
+    5.本地存储需要的数据，建立数据库
     
+    通过ID列表爬取电影评分：
+        import json
+        import requests as rs
+
+        ids = ['26387939','11803087','20451290']
+
+            for id in ids:
+	            url = 'https://api.douban.com/v2/movie/{}'.format(id)
+	            result = rs.get(url).json()
+	            title = result['alt_title']
+	            score = result['rating']['average']
+
+	            with open('douban_movie_score.txt','a') as of:
+		            of.write('{}: {}\n'.format(title,score))
+    通过name列表爬取电影评分：
+        import json
+        import requests as rs
+
+        name_list = ['异形：契约','摔跤吧！爸爸','速度与激情8']
+
+        for name in name_list:
+	        url = 'https://api.douban.com/v2/movie/search?q={}'.format(name)
+	        result = rs.get(url).json()
+	
+	        title = result['subjects'][0]['title']
+	        score = result['subjects'][0]['rating']['average']
+
+	        with open('douban_movie_score.txt','a') as of:
+		        of.write('{}: {}\n'.format(title,score))
     
     
