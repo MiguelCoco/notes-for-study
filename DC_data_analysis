@@ -80,4 +80,24 @@ API网站爬虫：
 	        with open('douban_movie_score.txt','a') as of:
 		        of.write('{}: {}\n'.format(title,score))
     
+基于网页爬取：
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
