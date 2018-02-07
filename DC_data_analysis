@@ -3,7 +3,12 @@ Anaconda
 strengths:
   1.创建不同python版本的独立虚拟环境
   conda create -n  名字  python=3.5/3.6/2.7 
-  2.可以直接利用conda安装及更新工具包
+  2.进入/退出虚拟环境
+  activate/deactivate 名字
+  3.可以直接利用conda安装及更新工具包
   conda install numpy
   conda update numpy
-  
+添加清华大学的conda镜像服务器，提升下载速度
+  conda config --add channels https://mirror.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  conda config --set show_channel_urls yes
+
